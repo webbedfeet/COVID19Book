@@ -7,15 +7,15 @@ author:
   - "John Mallery"
   - "Sean Davis"
 date: 2020-04-02
+output: 
+  bookdown::gitbook:
+    includes:
+      after_body: google_analytics.html
 always_allow_html: true
 github-repo: "seandavi/COVID19Book"
 cover-image: "images/logo.png"
 url: https://seandavi.github.io/COVID19Book
-output: 
-  - bookdown::gitbook
-  - bookdown::pdf_book
 ---
-
 # (PART) Introduction {-} 
 
 # Motivation
@@ -35,3 +35,11 @@ changing daily as captured by data reported around the world. The
    training resources for the many biomedical researchers who cannot
    currently perform experiments
 
+
+## Origins of this package 
+
+John C. Mallery conveyed code of Charles Morefield to harvest COVID-19
+time series data.  Vince Carey then started an R package/github repo
+to manage the relevant code.  The package was named `sars2pack` in
+hopes of avoiding name conflict with many other packages while
+remaining descriptive and focused.
