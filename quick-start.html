@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Quick start | Understanding the COVID-19 pandemic</title>
+  <meta name="description" content="2 Quick start | Understanding the COVID-19 pandemic" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Quick start | Understanding the COVID-19 pandemic" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Quick start | Understanding the COVID-19 pandemic" />
+  
+  
+  
+
+<meta name="author" content="Vincent Carey" />
+<meta name="author" content="Charles Morefield" />
+<meta name="author" content="John Mallery" />
+<meta name="author" content="Sean Davis" />
+
+
+<meta name="date" content="2020-04-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="epidemic-time-series-data-1.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.13/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/dt-ext-scroller-1.10.20/css/scroller.dataTables.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-scroller-1.10.20/js/dataTables.scroller.min.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="part"><span><b>I Introduction</b></span></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Motivation</a></li>
+<li class="chapter" data-level="2" data-path="quick-start.html"><a href="quick-start.html"><i class="fa fa-check"></i><b>2</b> Quick start</a><ul>
+<li class="chapter" data-level="2.1" data-path="quick-start.html"><a href="quick-start.html#installation"><i class="fa fa-check"></i><b>2.1</b> Installation</a></li>
+<li class="chapter" data-level="2.2" data-path="quick-start.html"><a href="quick-start.html#covid-19-resources-in-this-package"><i class="fa fa-check"></i><b>2.2</b> COVID-19 resources in this package</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="quick-start.html"><a href="quick-start.html#epidemic-time-series-data"><i class="fa fa-check"></i><b>2.2.1</b> Epidemic time-series data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="quick-start.html"><a href="quick-start.html#additional-resources-described-in-this-vignette"><i class="fa fa-check"></i><b>2.3</b> Additional resources described in this vignette</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="epidemic-time-series-data-1.html"><a href="epidemic-time-series-data-1.html"><i class="fa fa-check"></i><b>3</b> Epidemic time series data</a><ul>
+<li class="chapter" data-level="3.1" data-path="epidemic-time-series-data-1.html"><a href="epidemic-time-series-data-1.html#access-data"><i class="fa fa-check"></i><b>3.1</b> Access data</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="epidemic-time-series-data-1.html"><a href="epidemic-time-series-data-1.html#jhu-dataset"><i class="fa fa-check"></i><b>3.1.1</b> JHU Dataset</a></li>
+<li class="chapter" data-level="3.1.2" data-path="epidemic-time-series-data-1.html"><a href="epidemic-time-series-data-1.html#usafacts-dataset"><i class="fa fa-check"></i><b>3.1.2</b> USAFacts Dataset</a></li>
+<li class="chapter" data-level="3.1.3" data-path="epidemic-time-series-data-1.html"><a href="epidemic-time-series-data-1.html#nytimes-datasets"><i class="fa fa-check"></i><b>3.1.3</b> NYTimes datasets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="use-cases.html"><a href="use-cases.html"><i class="fa fa-check"></i><b>4</b> Use cases</a><ul>
+<li class="chapter" data-level="4.1" data-path="use-cases.html"><a href="use-cases.html#basic-data-exploration"><i class="fa fa-check"></i><b>4.1</b> Basic data exploration</a></li>
+<li class="chapter" data-level="4.2" data-path="use-cases.html"><a href="use-cases.html#visualize-time-series-data"><i class="fa fa-check"></i><b>4.2</b> Visualize time series data</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html"><i class="fa fa-check"></i><b>5</b> Modeling Replication rate</a><ul>
+<li class="chapter" data-level="5.1" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html#background"><i class="fa fa-check"></i><b>5.1</b> Background</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html#what-is-r_0"><i class="fa fa-check"></i><b>5.1.1</b> What is <span class="math inline">\(R_0\)</span>?</a></li>
+<li class="chapter" data-level="5.1.2" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html#what-do-r_0-values-mean"><i class="fa fa-check"></i><b>5.1.2</b> What do <span class="math inline">\(R_0\)</span> values mean?</a></li>
+<li class="chapter" data-level="5.1.3" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html#how-is-the-r_0-of-a-disease-calculated"><i class="fa fa-check"></i><b>5.1.3</b> How is the <span class="math inline">\(R_0\)</span> of a disease calculated?</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html#simulated-epidemic-model"><i class="fa fa-check"></i><b>5.2</b> Simulated epidemic model</a></li>
+<li class="chapter" data-level="5.3" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html#real-data-examples"><i class="fa fa-check"></i><b>5.3</b> Real data examples</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html#hubei-province"><i class="fa fa-check"></i><b>5.3.1</b> Hubei Province</a></li>
+<li class="chapter" data-level="5.3.2" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html#italy"><i class="fa fa-check"></i><b>5.3.2</b> Italy</a></li>
+<li class="chapter" data-level="5.3.3" data-path="modeling-replication-rate.html"><a href="modeling-replication-rate.html#new-york-city"><i class="fa fa-check"></i><b>5.3.3</b> New York City</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="european-datasets.html"><a href="european-datasets.html"><i class="fa fa-check"></i><b>6</b> European datasets</a></li>
+<li class="chapter" data-level="7" data-path="epicurves.html"><a href="epicurves.html"><i class="fa fa-check"></i><b>7</b> Epicurves</a><ul>
+<li class="chapter" data-level="7.1" data-path="epicurves.html"><a href="epicurves.html#worldwide-datasets"><i class="fa fa-check"></i><b>7.1</b> Worldwide datasets</a></li>
+<li class="chapter" data-level="7.2" data-path="epicurves.html"><a href="epicurves.html#european-datasets-1"><i class="fa fa-check"></i><b>7.2</b> European datasets</a></li>
+<li class="chapter" data-level="7.3" data-path="epicurves.html"><a href="epicurves.html#united-states-datasets"><i class="fa fa-check"></i><b>7.3</b> United States datasets</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="epicurves.html"><a href="epicurves.html#usafacts"><i class="fa fa-check"></i><b>7.3.1</b> USAFacts</a></li>
+<li class="chapter" data-level="7.3.2" data-path="epicurves.html"><a href="epicurves.html#new-york-times"><i class="fa fa-check"></i><b>7.3.2</b> New York Times</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="map-visualizations.html"><a href="map-visualizations.html"><i class="fa fa-check"></i><b>8</b> Map visualizations</a><ul>
+<li class="chapter" data-level="8.1" data-path="map-visualizations.html"><a href="map-visualizations.html#interactive-maps"><i class="fa fa-check"></i><b>8.1</b> Interactive maps</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="origins-of-this-package.html"><a href="origins-of-this-package.html"><i class="fa fa-check"></i>Origins of this package</a></li>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="9" data-path="data-resource-details.html"><a href="data-resource-details.html"><i class="fa fa-check"></i><b>9</b> Data resource details</a><ul>
+<li class="chapter" data-level="9.1" data-path="data-resource-details.html"><a href="data-resource-details.html#epidemic-datasets"><i class="fa fa-check"></i><b>9.1</b> Epidemic datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>10</b> </a><ul>
+<li class="chapter" data-level="10.1" data-path="section.html"><a href="section.html#world-bank"><i class="fa fa-check"></i><b>10.1</b> World Bank</a></li>
+<li class="chapter" data-level="10.2" data-path="section.html"><a href="section.html#united-states-census"><i class="fa fa-check"></i><b>10.2</b> United States Census</a></li>
+<li class="chapter" data-level="10.3" data-path="section.html"><a href="section.html#eurostat"><i class="fa fa-check"></i><b>10.3</b> Eurostat</a></li>
+<li class="chapter" data-level="10.4" data-path="section.html"><a href="section.html#other-resources"><i class="fa fa-check"></i><b>10.4</b> Other resources</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Understanding the COVID-19 pandemic</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="quick-start" class="section level1">
+<h1><span class="header-section-number">2</span> Quick start</h1>
+<div id="installation" class="section level2">
+<h2><span class="header-section-number">2.1</span> Installation</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="st">&#39;seandavi/sars2pack&#39;</span>)</a></code></pre></div>
+</div>
+<div id="covid-19-resources-in-this-package" class="section level2">
+<h2><span class="header-section-number">2.2</span> COVID-19 resources in this package</h2>
+<p>The COVID-19 data in this package are, right now, focused toward
+time-series descriptions of confirmed cases, deaths, testing, and
+recovered cases. <strong>There is no requirement that this remain the case</strong>.
+Contributions of additional data resources or simple accessor functions
+will only add to our abilities to use data science and modeling
+to understand COVID-19.</p>
+<p><em>Request for help</em>: I would be more than happy to accept help with
+defining new data resources. Consider a <a href="https://github.com/seandavi/sars2pack/compare">pull request</a> (or an <a href="https://github.com/seandavi/sars2pack/issues/new">issue</a> for
+non-programmer types).</p>
+<div id="epidemic-time-series-data" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Epidemic time-series data</h3>
+<ul>
+<li><a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/">JHU</a> : global deaths, confirmed cases, and recovered time series
+data; <em>does not include fine-level United States data</em>. See
+<code>jhu_data()</code>.</li>
+<li><a href="https://github.com/nytimes/covid-19-data">New York Times</a> : United states state and county level deaths,
+confirmed cases time series. See <code>nytimes_county_data()</code> and
+<code>nytimes_state_data</code>.</li>
+<li><a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/">USAFacts</a> : Alternative United states state and county level deaths
+and confirmed cases time series</li>
+</ul>
+</div>
+</div>
+<div id="additional-resources-described-in-this-vignette" class="section level2">
+<h2><span class="header-section-number">2.3</span> Additional resources described in this vignette</h2>
+<ul>
+<li></li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="epidemic-time-series-data-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["covid_19.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
