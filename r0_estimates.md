@@ -102,7 +102,7 @@ par(mfrow=c(2,2))
 plot2(est)
 ```
 
-![](r0_estimates_files/figure-latex/lksim-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/lksim-1.png" width="672" />
 
 The plotfit2 function is also useful.  These fits
 look identical but they are not.
@@ -113,7 +113,7 @@ par(mfrow=c(2,2))
 plotfit2(est)
 ```
 
-![](r0_estimates_files/figure-latex/lksim2-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/lksim2-1.png" width="672" />
 
 ## Real data examples
 
@@ -174,7 +174,7 @@ plot2(est.EG)
 plotfit2(est.EG)
 ```
 
-![](r0_estimates_files/figure-latex/dohub-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/dohub-1.png" width="672" />
 
 ### Italy
 
@@ -212,7 +212,7 @@ plot2(est.EG, main="Italy")
 plotfit2(est.EG, main="Italy")
 ```
 
-![](r0_estimates_files/figure-latex/doit-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/doit-1.png" width="672" />
 
 ### New York City
 
@@ -261,7 +261,7 @@ epiestim = EpiEstim::estimate_R(nytdat.filt, method = "parametric_si",
 plot(epiestim)
 ```
 
-![](r0_estimates_files/figure-latex/unnamed-chunk-3-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
 ```
 ## TableGrob (3 x 1) "arrange": 3 grobs

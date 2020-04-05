@@ -8,6 +8,9 @@ author:
   - "Sean Davis"
 date: 2020-04-02
 always_allow_html: true
+github-repo: "seandavi/COVID19Book"
+cover-image: "images/logo.png"
+url: https://seandavi.github.io/COVID19Book
 output: 
   - bookdown::gitbook
   - bookdown::pdf_book

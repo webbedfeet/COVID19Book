@@ -50,11 +50,11 @@ x = left_join(geodata, eucov, by=c('NUTS_NAME'='nuts_2'))
 tmap::tm_shape(geodata) + tm_polygons() 
 ```
 
-![](eurostat_combo_files/figure-latex/unnamed-chunk-1-1.pdf)<!-- --> 
+<img src="eurostat_combo_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
 
 ```r
 x %>% filter(date=='2020-04-01') %>% tmap::tm_shape() + tm_polygons(col='cases') 
 ```
 
-![](eurostat_combo_files/figure-latex/unnamed-chunk-2-1.pdf)<!-- --> 
+<img src="eurostat_combo_files/figure-html/unnamed-chunk-2-1.png" width="672" />
