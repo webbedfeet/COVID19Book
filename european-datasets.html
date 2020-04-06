@@ -213,28 +213,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="european-datasets" class="section level1">
 <h1><span class="header-section-number">7</span> European datasets</h1>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb85-1" data-line-number="1"><span class="kw">library</span>(knitr)</a>
-<a class="sourceLine" id="cb85-2" data-line-number="2">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">message=</span><span class="ot">FALSE</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" data-line-number="1"><span class="kw">library</span>(sars2pack)</a>
-<a class="sourceLine" id="cb86-2" data-line-number="2"><span class="kw">library</span>(eurostat)</a>
-<a class="sourceLine" id="cb86-3" data-line-number="3"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb86-4" data-line-number="4"><span class="kw">library</span>(tmap)</a>
-<a class="sourceLine" id="cb86-5" data-line-number="5"><span class="kw">library</span>(sf)</a></code></pre></div>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb87-1" data-line-number="1">eucov =<span class="st"> </span><span class="kw">eu_data_cache_data</span>()</a></code></pre></div>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb88-1" data-line-number="1">geodata =<span class="st"> </span><span class="kw">get_eurostat_geospatial</span>(<span class="dt">output_class =</span> <span class="st">&quot;sf&quot;</span>,</a>
-<a class="sourceLine" id="cb88-2" data-line-number="2">                                  <span class="dt">resolution =</span> <span class="st">&quot;60&quot;</span>,</a>
-<a class="sourceLine" id="cb88-3" data-line-number="3">                                  <span class="dt">nuts_level =</span> <span class="dv">2</span>,</a>
-<a class="sourceLine" id="cb88-4" data-line-number="4">                                  <span class="dt">year=</span><span class="dv">2016</span>)</a>
-<a class="sourceLine" id="cb88-5" data-line-number="5">## The names here need to be initialized to NULL</a>
-<a class="sourceLine" id="cb88-6" data-line-number="6">## for the join below to working</a>
-<a class="sourceLine" id="cb88-7" data-line-number="7">## See https://github.com/r-spatial/sf/issues/1177#issuecomment-541858742</a>
-<a class="sourceLine" id="cb88-8" data-line-number="8"><span class="kw">head</span>(<span class="kw">names</span>(geodata<span class="op">$</span>geometry))</a></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb60-1" data-line-number="1"><span class="kw">library</span>(knitr)</a>
+<a class="sourceLine" id="cb60-2" data-line-number="2">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">message=</span><span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" data-line-number="1"><span class="kw">library</span>(sars2pack)</a>
+<a class="sourceLine" id="cb61-2" data-line-number="2"><span class="kw">library</span>(eurostat)</a>
+<a class="sourceLine" id="cb61-3" data-line-number="3"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb61-4" data-line-number="4"><span class="kw">library</span>(tmap)</a>
+<a class="sourceLine" id="cb61-5" data-line-number="5"><span class="kw">library</span>(sf)</a></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb62-1" data-line-number="1">eucov =<span class="st"> </span><span class="kw">eu_data_cache_data</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" data-line-number="1">geodata =<span class="st"> </span><span class="kw">get_eurostat_geospatial</span>(<span class="dt">output_class =</span> <span class="st">&quot;sf&quot;</span>,</a>
+<a class="sourceLine" id="cb63-2" data-line-number="2">                                  <span class="dt">resolution =</span> <span class="st">&quot;60&quot;</span>,</a>
+<a class="sourceLine" id="cb63-3" data-line-number="3">                                  <span class="dt">nuts_level =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb63-4" data-line-number="4">                                  <span class="dt">year=</span><span class="dv">2016</span>)</a>
+<a class="sourceLine" id="cb63-5" data-line-number="5">## The names here need to be initialized to NULL</a>
+<a class="sourceLine" id="cb63-6" data-line-number="6">## for the join below to working</a>
+<a class="sourceLine" id="cb63-7" data-line-number="7">## See https://github.com/r-spatial/sf/issues/1177#issuecomment-541858742</a>
+<a class="sourceLine" id="cb63-8" data-line-number="8"><span class="kw">head</span>(<span class="kw">names</span>(geodata<span class="op">$</span>geometry))</a></code></pre></div>
 <pre><code>## [1] &quot;0&quot; &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot;</code></pre>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" data-line-number="1"><span class="kw">names</span>(geodata<span class="op">$</span>geometry)=<span class="ot">NULL</span></a></code></pre></div>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb91-1" data-line-number="1">x =<span class="st"> </span><span class="kw">left_join</span>(geodata, eucov, <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&#39;NUTS_NAME&#39;</span>=<span class="st">&#39;nuts_2&#39;</span>))</a></code></pre></div>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" data-line-number="1">tmap<span class="op">::</span><span class="kw">tm_shape</span>(geodata) <span class="op">+</span><span class="st"> </span><span class="kw">tm_polygons</span>() </a></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" data-line-number="1"><span class="kw">names</span>(geodata<span class="op">$</span>geometry)=<span class="ot">NULL</span></a></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" data-line-number="1">x =<span class="st"> </span><span class="kw">left_join</span>(geodata, eucov, <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&#39;NUTS_NAME&#39;</span>=<span class="st">&#39;nuts_2&#39;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb67-1" data-line-number="1">tmap<span class="op">::</span><span class="kw">tm_shape</span>(geodata) <span class="op">+</span><span class="st"> </span><span class="kw">tm_polygons</span>() </a></code></pre></div>
 <p><img src="eurostat_combo_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb93-1" data-line-number="1">x <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(date<span class="op">==</span><span class="st">&#39;2020-04-01&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span>tmap<span class="op">::</span><span class="kw">tm_shape</span>() <span class="op">+</span><span class="st"> </span><span class="kw">tm_polygons</span>(<span class="dt">col=</span><span class="st">&#39;cases&#39;</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" data-line-number="1">x <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(date<span class="op">==</span><span class="st">&#39;2020-04-01&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span>tmap<span class="op">::</span><span class="kw">tm_shape</span>() <span class="op">+</span><span class="st"> </span><span class="kw">tm_polygons</span>(<span class="dt">col=</span><span class="st">&#39;cases&#39;</span>) </a></code></pre></div>
 <p><img src="eurostat_combo_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 
 </div>

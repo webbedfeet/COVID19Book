@@ -63,20 +63,6 @@ inputs.  We are working on that.
 library(sars2pack)
 library(R0)
 library(lubridate)
-```
-
-```
-## 
-## Attaching package: 'lubridate'
-```
-
-```
-## The following object is masked from 'package:base':
-## 
-##     date
-```
-
-```r
 # Generating an epidemic with given parameters
 mGT <- generation.time("gamma", c(3,1.5))
 set.seed(5432)  # always initialize when simulating!
@@ -85,20 +71,6 @@ mEpid <- sim.epid(epid.nb=1, GT=mGT, epid.length=30,
 mEpid <- mEpid[,1]
 # Running estimations
 est <- estimate.R(epid=mEpid, GT=mGT, methods=c("EG","ML","TD"), begin=1, end=30)
-```
-
-```
-## Waiting for profiling to be done...
-```
-
-```
-## Warning in est.R0.TD(epid = c(1, 0, 1, 0, 1, 0, 2, 1, 2, 1, 7, 2, 3, 4, :
-## Simulations may take several minutes.
-```
-
-```
-## Warning in est.R0.TD(epid = c(1, 0, 1, 0, 1, 0, 2, 1, 2, 1, 7, 2, 3, 4, : Using
-## initial incidence as initial number of cases.
 ```
 
 We modified the plotting function in *[R0](https://CRAN.R-project.org/package=R0)* which
@@ -110,7 +82,7 @@ par(mfrow=c(2,2))
 sars2pack::plot2(est)
 ```
 
-![](r0_estimates_files/figure-latex/lksim-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/lksim-1.png" width="672" />
 
 The `plotfit2` function is also useful.  These fits
 look identical but they are not.
@@ -121,45 +93,13 @@ par(mfrow=c(2,2))
 sars2pack::plotfit2(est)
 ```
 
-![](r0_estimates_files/figure-latex/lksim2-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/lksim2-1.png" width="672" />
 
 ## Real data examples
 
 
 ```r
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:lubridate':
-## 
-##     intersect, setdiff, union
-```
-
-```
-## The following object is masked from 'package:MASS':
-## 
-##     select
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 library(magrittr)
 ```
 
@@ -186,23 +126,6 @@ mGT <- generation.time("gamma", c(3.96, 4.75)) # from DOI 10.7326/M20-0504
 hubdat.filt = trim_leading_values(c(hubdat[1], diff(hubdat)))
 est.EG <- estimate.R(epid=hubdat.filt, GT=mGT, 
     methods=c("EG", "TD"), begin=1L, end=as.integer(length(hubdat.filt)))
-```
-
-```
-## Waiting for profiling to be done...
-```
-
-```
-## Warning in est.R0.TD(epid = c(`2020-01-22` = 444, `2020-01-23` = 0, `2020-01-24`
-## = 105, : Simulations may take several minutes.
-```
-
-```
-## Warning in est.R0.TD(epid = c(`2020-01-22` = 444, `2020-01-23` = 0, `2020-01-24`
-## = 105, : Using initial incidence as initial number of cases.
-```
-
-```r
 est.EG
 ```
 
@@ -220,7 +143,7 @@ plot2(est.EG)
 plotfit2(est.EG)
 ```
 
-![](r0_estimates_files/figure-latex/dohub-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/dohub-1.png" width="672" />
 
 ### Italy
 
@@ -237,13 +160,6 @@ names(itdat) = dates
 itdat.filt = trim_leading_values(c(itdat[1], diff(itdat)))
 est.EG <- estimate.R(epid=itdat.filt, GT=mGT, 
     methods=c("EG"), begin=1L, end=as.integer(length(itdat.filt)))
-```
-
-```
-## Waiting for profiling to be done...
-```
-
-```r
 est.EG
 ```
 
@@ -258,7 +174,7 @@ plot2(est.EG, main="Italy")
 plotfit2(est.EG, main="Italy")
 ```
 
-![](r0_estimates_files/figure-latex/doit-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/doit-1.png" width="672" />
 
 ### New York City
 
@@ -281,32 +197,10 @@ We can also use the package *[EpiEstim](https://CRAN.R-project.org/package=EpiEs
 
 ```r
 library(EpiEstim)
-```
-
-```
-## 
-## Attaching package: 'EpiEstim'
-```
-
-```
-## The following object is masked from 'package:sars2pack':
-## 
-##     estimate_R
-```
-
-```r
 epiestim = EpiEstim::estimate_R(nytdat.filt, method = "parametric_si",
                                 config = EpiEstim::make_config(list(
                                     mean_si = 3.96, std_si = 4.75)))
-```
-
-```
-## Default config will estimate R on weekly sliding windows.
-##     To change this change the t_start and t_end arguments.
-```
-
-```r
 invisible(plot(epiestim))
 ```
 
-![](r0_estimates_files/figure-latex/unnamed-chunk-4-1.pdf)<!-- --> 
+<img src="r0_estimates_files/figure-html/unnamed-chunk-4-1.png" width="672" />
