@@ -1,6 +1,6 @@
 --- 
-title: "Understanding the COVID-19 pandemic"
-subtitle: "A data-driven approach using the sars2pack R package"
+title: "Examine the COVID-19 pandemic with data"
+subtitle: "Using R and public data resources"
 author: 
   - "Vincent Carey"
   - "Charles Morefield"

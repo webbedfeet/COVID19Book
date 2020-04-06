@@ -110,7 +110,7 @@ par(mfrow=c(2,2))
 sars2pack::plot2(est)
 ```
 
-<img src="r0_estimates_files/figure-html/lksim-1.png" width="672" />
+![](r0_estimates_files/figure-latex/lksim-1.pdf)<!-- --> 
 
 The `plotfit2` function is also useful.  These fits
 look identical but they are not.
@@ -121,7 +121,7 @@ par(mfrow=c(2,2))
 sars2pack::plotfit2(est)
 ```
 
-<img src="r0_estimates_files/figure-html/lksim2-1.png" width="672" />
+![](r0_estimates_files/figure-latex/lksim2-1.pdf)<!-- --> 
 
 ## Real data examples
 
@@ -220,7 +220,7 @@ plot2(est.EG)
 plotfit2(est.EG)
 ```
 
-<img src="r0_estimates_files/figure-html/dohub-1.png" width="672" />
+![](r0_estimates_files/figure-latex/dohub-1.pdf)<!-- --> 
 
 ### Italy
 
@@ -258,7 +258,7 @@ plot2(est.EG, main="Italy")
 plotfit2(est.EG, main="Italy")
 ```
 
-<img src="r0_estimates_files/figure-html/doit-1.png" width="672" />
+![](r0_estimates_files/figure-latex/doit-1.pdf)<!-- --> 
 
 ### New York City
 
@@ -309,4 +309,4 @@ epiestim = EpiEstim::estimate_R(nytdat.filt, method = "parametric_si",
 invisible(plot(epiestim))
 ```
 
-<img src="r0_estimates_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+![](r0_estimates_files/figure-latex/unnamed-chunk-4-1.pdf)<!-- --> 
