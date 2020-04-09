@@ -2,11 +2,11 @@
 title: "Examine the COVID-19 pandemic with data"
 subtitle: "Using R and public data resources"
 author: 
-  - "Vincent Carey"
-  - "Charles Morefield"
-  - "John Mallery"
-  - "Sean Davis"
-date: 2020-04-02
+  - Vincent J. Carey^[Harard Medical School, Channing Laboratory, Brigham and Women's Hospital]
+  - Charles Morefield^[Arctan, Inc.]
+  - John Mallery^[MIT Artificial Intelligence Laboratory]
+  - Sean Davis^[National Cancer Institute, National Institutes of Health]
+date: 2020-04-09
 output: 
   bookdown::gitbook:
     includes:

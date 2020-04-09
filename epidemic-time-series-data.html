@@ -21,13 +21,13 @@
   
   <meta name="twitter:image" content="https://seandavi.github.io/COVID19Bookimages/logo.png" />
 
-<meta name="author" content="Vincent Carey" />
+<meta name="author" content="Vincent J. Carey" />
 <meta name="author" content="Charles Morefield" />
 <meta name="author" content="John Mallery" />
 <meta name="author" content="Sean Davis" />
 
 
-<meta name="date" content="2020-04-02" />
+<meta name="date" content="2020-04-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -236,7 +236,7 @@ below <strong>require a network connection</strong> to get updated data.</p>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">class</span>(jhu)</a></code></pre></div>
 <pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">dim</span>(jhu)</a></code></pre></div>
-<pre><code>## [1] 39300     7</code></pre>
+<pre><code>## [1] 60450     7</code></pre>
 <p>Column names include:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">colnames</span>(jhu)</a></code></pre></div>
 <pre><code>## [1] &quot;ProvinceState&quot; &quot;CountryRegion&quot; &quot;Lat&quot;           &quot;Long&quot;         
@@ -276,7 +276,7 @@ below <strong>require a network connection</strong> to get updated data.</p>
 <a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw">class</span>(nytimes_state)</a></code></pre></div>
 <pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">dim</span>(nytimes_state)</a></code></pre></div>
-<pre><code>## [1] 3658    5</code></pre>
+<pre><code>## [1] 3988    5</code></pre>
 <p>Column names include:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">colnames</span>(nytimes_state)</a></code></pre></div>
 <pre><code>## [1] &quot;date&quot;   &quot;state&quot;  &quot;fips&quot;   &quot;count&quot;  &quot;subset&quot;</code></pre>
@@ -292,21 +292,12 @@ below <strong>require a network connection</strong> to get updated data.</p>
 <a class="sourceLine" id="cb26-2" data-line-number="2"><span class="kw">class</span>(nytimes_county)</a></code></pre></div>
 <pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw">dim</span>(nytimes_county)</a></code></pre></div>
-<pre><code>## [1] 66502     6</code></pre>
+<pre><code>## [1] 81440     6</code></pre>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">colnames</span>(nytimes_county)</a></code></pre></div>
 <pre><code>## [1] &quot;date&quot;   &quot;county&quot; &quot;state&quot;  &quot;fips&quot;   &quot;count&quot;  &quot;subset&quot;</code></pre>
 </div>
 </div>
 </div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-93043521-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-93043521-4');
-</script>
             </section>
 
           </div>

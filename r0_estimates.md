@@ -40,7 +40,7 @@ Three main factors impact the $R_0$ value of a disease:
 
 - *Contact rate*: If a person who’s infected with a contagious disease comes into contact with many people who aren’t infected or vaccinated, the disease will spread more quickly. If that person remains at home, in a hospital, or otherwise quarantined while they’re contagious, the disease will spread more slowly. A high contact rate will contribute to a higher $R_0$ value. The corollary, that lower contact rate, can reduce $R_0$ is the basis for [flattening the curve](https://www.nytimes.com/article/flatten-curve-coronavirus.html) through [social distancing](https://en.wikipedia.org/wiki/Social_distancing).
 
-![Toby Morris (Spinoff.co.nz) / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Covid-19-Transmission-graphic-01.gif/512px-Covid-19-Transmission-graphic-01.gif)
+
 
 
 - *Mode of transmission*:
